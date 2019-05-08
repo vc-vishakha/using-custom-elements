@@ -1,0 +1,52 @@
+/* You can add  styles and also import other style files */
+
+@import 'styles/mixins';
+@import 'styles/variables';
+@import 'styles/fonts';
+/* All components style */
+
+@import 'styles/products';
+@import 'styles/item-slider';
+@import 'styles/product-item-list';
+
+// /* Angular material style*/
+
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+/* Common body style */
+
+:root {
+    font-size: 87.5%;
+    body {
+        font-size: $font-size-base;
+        margin: 0;
+        font-family: $font-family-base;
+        font-weight: 400;
+        background-color: $body-background;
+        color: $body-color;
+        line-height: $line-height-base;
+    }
+}
+
+/* Back button */
+
+.back-btn {
+    margin-top: 30px;
+    a {
+        color: $primary-color;
+        font-size: 18px;
+        text-decoration: none;
+        &:hover {
+            color: gray;
+        }
+        img {
+            padding-right: 10px;
+        }
+    }
+}
+
+
+@media (max-width:1199px) {
+    :root {
+        font-size: 75.5%;
+    }
+}

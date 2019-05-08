@@ -1,0 +1,130 @@
+@import '../styles/variables';
+
+/** Common Form Field ****/
+
+@mixin formField {
+    .mat-form-field-appearance-fill,
+    .mat-form-field {
+        width: 100%;
+        .mat-form-field-underline {
+            height: 2px !important;
+            background-color: $primary-color;
+            bottom: 0;
+            &:before {
+                height: 2px !important;
+                background-color: $primary-color;
+            }
+        }
+        .mat-form-field-flex {
+            background-color: $secondary-color;
+            box-shadow: 0 2px 33px rgba(228, 228, 228, 0.5);
+            padding: 7px .75em 0 .75em !important;
+        }
+        .mat-form-field-infix {
+            padding: 3px 0 5px 0;
+        }
+        .mat-form-field-wrapper {
+            padding-bottom: 0;
+        }
+    }
+}
+
+/** Color Select ****/
+
+@mixin colorSelect {
+    .color-select {
+        .mat-select-value {
+            padding-right: 25px;
+            position: relative;
+            &::after {
+                border-radius: 2px;
+                content: "";
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+        }
+        &.red {
+            .mat-select-value {
+                &::after {
+                    background-color: red;
+                }
+            }
+        }
+        &.green {
+            .mat-select-value {
+                &::after {
+                    background-color: green;
+                }
+            }
+        }
+    }
+}
+
+/***** Auto Complete ******/
+
+@mixin autoComplete {
+    .mat-autocomplete-panel {
+        border-bottom: 5px solid $primary-color;
+        max-height: 300px !important;
+        .auto-complete-list {
+            position: relative;
+            display: flex;
+            padding: 10px 0;
+            &::after {
+                background-color: #e7e7e7;
+                content: "";
+                width: 1px;
+                position: absolute;
+                margin: auto;
+                top: 10px;
+                left: 0;
+                right: 0;
+                bottom: 10px;
+            }
+            .list-box {
+                width: 50%;
+                padding: 0 20px;
+                .mat-option {
+                    border-bottom: 1px solid #e7e7e7;
+                    &:hover {
+                        background-color: #e7e7e7;
+                    }
+                    .inner {
+                        display: flex;
+                        justify-content: space-between;
+                        .img-box {
+                            width: 45px;
+                            height: 45px;
+                            position: relative;
+                            overflow: hidden;
+                            img {
+                                width: auto;
+                                max-width: 90%;
+                                max-height: 90%;
+                                position: absolute;
+                                left: -999px;
+                                right: -999px;
+                                bottom: -999px;
+                                top: -999px;
+                                margin: auto;
+                            }
+                        }
+                        label {
+                            margin: 0;
+                        }
+                        .desc-text {
+                            padding-left: 11px;
+                            width: 90%;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

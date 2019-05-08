@@ -1,0 +1,8 @@
+<!-- <h1> {{  'ourRecommendations'  | translate}} </h1> -->
+<div class="items-slider">
+  <owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide *ngFor="let product of products; index as i;trackBy: trackByFn">
+      <app-product-list [productDetail]="product"></app-product-list>
+    </ng-template>
+  </owl-carousel-o>
+</div>

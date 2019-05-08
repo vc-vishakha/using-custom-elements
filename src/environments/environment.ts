@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  imagePath: 'http://localhost:4000/',
+  imagePath: 'http://localhost:4200/',
   defaultLanguage: 'en',
 };
 

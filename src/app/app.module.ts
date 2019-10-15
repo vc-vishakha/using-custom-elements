@@ -4,40 +4,31 @@ import { NgModule, Injector, ErrorHandler, CUSTOM_ELEMENTS_SCHEMA } from '@angul
 import { createCustomElement } from '@angular/elements';
 
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { MatIconModule, MatButtonModule } from '@angular/material';
-import { ProductListComponent } from './product-list/product-list.component';
-import { SliderService } from './slider/slider.service';
-import { CarouselModule } from 'ngx-owl-carousel-o';
 import { SliderComponent } from './slider/slider.component';
 import { TranslationLoaderService } from './services/translation-loader.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
-import { environment } from 'src/environments/environment';
+import { environment } from '../environments/environment';
 
 import { locale as germanLocale } from '../assets/i18n/de';
 import { locale as englishLocale } from '../assets/i18n/en';
 import { GlobalErrorHandler } from './services/error-handler';
+import { SliderModule } from './slider/slider.module';
 
 
 @NgModule({
-  declarations: [
-    ProductListComponent,
+  declarations: [],
+  entryComponents: [
     SliderComponent
   ],
-  entryComponents: [
-    ProductListComponent,
-    SliderComponent ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatIconModule,
-    MatButtonModule,
     TranslateModule.forRoot(),
-    CarouselModule,
-    RouterModule.forRoot([])
+    RouterModule.forRoot([]),
+    SliderModule
   ],
   providers: [
-      SliderService,
       TranslationLoaderService,
       {
         provide: ErrorHandler,

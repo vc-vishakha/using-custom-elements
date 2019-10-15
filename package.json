@@ -1,6 +1,6 @@
 {
   "name": "using-custom-elements",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,9 +8,10 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "package": "jscat ./dist/using-custom-elements/runtime.js ./dist/using-custom-elements/polyfills.js ./dist/using-custom-elements/scripts.js ./dist/using-custom-elements/main.js > custom-element.js"
+    "package": "jscat ./dist/using-custom-elements/runtime.js ./dist/using-custom-elements/polyfills.js ./dist/using-custom-elements/scripts.js ./dist/using-custom-elements/main.js > custom-element.js",
+    "packagr": "ng-packagr -p ng-package.json"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "^7.2.14",
     "@angular/cdk": "^7.3.7",
@@ -49,6 +50,7 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "ng-packagr": "^5.1.0",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",

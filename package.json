@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "package": "jscat ./dist/using-custom-elements/runtime.js ./dist/using-custom-elements/polyfills.js ./dist/using-custom-elements/scripts.js ./dist/using-custom-elements/main.js > custom-element.js",
+    "package": "jscat ./dist/using-custom-elements/runtime.js ./dist/using-custom-elements/polyfills.js ./dist/using-custom-elements/scripts.js ./dist/using-custom-elements/main.js > ./src/assets/webcomponent/custom-element.js",
     "packagr": "ng-packagr -p ng-package.json"
   },
   "private": false,
@@ -24,9 +24,11 @@
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
+    "@ngu/carousel": "^1.5.5",
     "@ngx-translate/core": "^11.0.1",
     "core-js": "^2.5.4",
     "document-register-element": "^1.7.2",
+    "hammerjs": "^2.0.8",
     "jscat": "0.0.2",
     "ngx-owl-carousel-o": "^1.1.2",
     "rxjs": "~6.3.3",
@@ -36,7 +38,7 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.13.8",
     "@angular/cli": "~7.3.3",
-    "@angular/compiler-cli": "~7.2.0",
+    "@angular/compiler-cli": "^8.2.14",
     "@angular/language-service": "~7.2.14",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
@@ -52,6 +54,7 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "ng-packagr": "^5.1.0",
     "protractor": "~5.4.0",
+    "serialize-javascript": "^2.1.1",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.2.2"
